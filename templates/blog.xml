@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:georss='http://www.georss.org/georss' xmlns:gd='http://schemas.google.com/g/2005' xmlns:thr='http://purl.org/syndication/thread/1.0'>
+<generator version='7.00' uri='http://www.blogger.com'>Blogger</generator>
+{% for entry in entries %}
+<entry>
+  <id>tag:blogger.com,1999:{{ loop.index }}</id>
+  <published>{{ entry.published }}T12:00:00.000+04:00</published>
+  <updated>{{ entry.published }}T12:00:00.000+04:00</updated>
+  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/blogger/2008/kind#post'/>
+  <title type='text'>Journal Entry for {{ entry.published }}</title>
+  <content type='html'>
+    {{ entry.content }}
+  </content>
+</entry>
+{% endfor %}
+</feed>

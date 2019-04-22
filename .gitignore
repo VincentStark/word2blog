@@ -1,0 +1,9 @@
+# Ignore vim TMP files
+*.swp
+
+# Ignore input files
+input/*
+
+# Ignore output file
+output.xml
+
